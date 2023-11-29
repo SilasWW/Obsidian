@@ -1,2 +1,1 @@
-# Obsidian
-Repo mostly just used to sync my nodes
+Hmm... Might do something cool with this later
