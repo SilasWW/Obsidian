@@ -1,6 +1,5 @@
 #Disys
 
-## Replication
 [5.1 Replication (Martin Kleppmann)](https://www.youtube.com/watch?v=mBUCF1WGI_I&list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB&index=14)
 
 **Problem: Retrying state updated**
@@ -9,7 +8,7 @@
 
 
 **Solution: Exactly once semantic**
-Retry + [[idempotence]] or deduplication
+Retry + [[Idempotence]] or deduplication
 
 **More problems**
 ![[Pasted image 20231129141711.png]]
