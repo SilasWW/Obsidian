@@ -1,9 +1,11 @@
 #Disys
 
+Replication is having the same data on multiple machines. This is in itself an easy task, if the data on the machines never change. However, with regularly changing data, keeping the data synchronized across the replicas(nodes with copies of the data) becomes a significant challenge. 
+
 [5.1 Replication (Martin Kleppmann)](https://www.youtube.com/watch?v=mBUCF1WGI_I&list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB&index=14)
 
-**Problem: Retrying state updated**
-
+**Problem: Retrying state updates**
+Resending requests, particularly post-requests can result in actions being performed too many times.
 ![[Pasted image 20231129135946.png]]
 
 
@@ -13,7 +15,9 @@ Retry + [[Idempotence]] or deduplication
 **More problems**
 ![[Pasted image 20231129141711.png]]
 
+
 ![[Pasted image 20231129141759.png]]
+Adding and removing can end out of the intended order, in case of faults. 
 
 **Solution: Timestamps and Tombstones**
 
@@ -44,4 +48,9 @@ Each operation (read or write) is tagged with a unique identifier, such as a tim
 The quorum condition, *`r + w > n`*, guarantees overlap between read and write operations, ensuring that any read operation following a write will intersect with at least one replica that has the latest write. This overlap is crucial for maintaining consistent reads and ensuring that the most recent write is always available to be read.
 
 *[[Quorum|Other quorom strategies]]*
+
+
+
+## With multiple replicas, a question inevitably arises: how do we ensure that all the data ends up on all the replicas?
+
 
