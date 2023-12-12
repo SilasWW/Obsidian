@@ -33,7 +33,6 @@ The CAP theorem, also known as Brewer's theorem, is a fundamental principle in t
 2. **Availability**: Every request (whether read or write) receives a response — without the guarantee that it contains the most recent write. Availability in this context means that every request to a non-failing node in the system must result in a response, not that every node must be available at all times.
     
 3. **Partition Tolerance**: The system continues to operate despite arbitrary message loss or failure of part of the system (i.e., network partitions). A network partition is a break in the network that prevents communication between two groups of nodes in the distributed system.
-    
 
 According to the CAP theorem, a distributed system can only satisfy two of these three properties at any given time, but not all three simultaneously:
 

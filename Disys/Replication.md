@@ -53,4 +53,18 @@ The quorum condition, *`r + w > n`*, guarantees overlap between read and write o
 
 ## With multiple replicas, a question inevitably arises: how do we ensure that all the data ends up on all the replicas?
 
+Typially there are 3 algorithms:
+
+1) Single leader replication
+2) Multi-leader replication
+3) Leaderless replication
+
+
+
+
+
+
+
+
+
 
