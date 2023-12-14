@@ -17,3 +17,7 @@ Normalization is a database design process that reduces redundancy and improves 
 	* It must be in 2NF
 	* Must also remove all transitive dependencies
 	* 3NF can be achieved by sticking to the mantra, 'every non-key attribute must depend on the full primary key, and nothing but the full-primary key'
+
+4. Boyce-Codd NF:
+	* More or less, fictional 🤷
+
